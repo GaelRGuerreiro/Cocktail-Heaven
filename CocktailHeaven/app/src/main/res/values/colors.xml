@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="wine">#721422</color>
+    <color name="button">#5B2E57</color>
+
+
+
 </resources>
