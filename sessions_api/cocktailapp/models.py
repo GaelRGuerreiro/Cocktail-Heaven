@@ -2,7 +2,7 @@ from django.db import models
 
 
 class CustomUser(models.Model):
-    username=models.charField(unique=True, max_lengtn=50)
+    username=models.CharField(unique=True, max_length=50)
     ecrypted_password= models.CharField(max_length=100)
     email = models.CharField(unique=True, max_length=200)
 
