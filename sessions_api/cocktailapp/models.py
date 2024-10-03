@@ -10,7 +10,7 @@ class CustomUser(models.Model):
         return self.username
 
 
-class UserSeesion(models.Model):
+class UserSession(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     token = models.CharField(unique=True, max_length=20)
 
