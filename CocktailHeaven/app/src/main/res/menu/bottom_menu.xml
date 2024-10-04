@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Cocteles"
+        android:title="Coctel"
+        android:icon="@drawable/coctel"
+        />
+    <item
+        android:id="@+id/Perfil"
+        android:title="Perfil"
+        android:icon="@drawable/perfil"
+        />
+    <item
+        android:id="@+id/Ingredientes"
+        android:title="Ingredientes"
+        android:icon="@drawable/ingredientes"
+        />
+
+
+</menu>
