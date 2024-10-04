@@ -3,7 +3,7 @@ from django.db import models
 
 class CustomUser(models.Model):
     username=models.CharField(unique=True, max_length=50)
-    ecrypted_password= models.CharField(max_length=100)
+    encrypted_password= models.CharField(max_length=100)
     email = models.CharField(unique=True, max_length=200)
 
     def __str__(self):

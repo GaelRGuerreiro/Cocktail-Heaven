@@ -44,26 +44,35 @@ def register(request):
 def login(request):
     if request.method != 'POST':
         return JsonResponse({'error': 'Unsupported HTTP method'}, status=405)
+
     body = json.loads(request.body)
-    username = body.get('username', None)
-    if username == None:
+    username = body.get('username')
+    if username is None:
         return JsonResponse({'error': 'Missing username in request body'}, status=400)
+
     try:
         user = CustomUser.objects.get(username=username)
     except CustomUser.DoesNotExist:
         return JsonResponse({'error': 'Username does not exist'}, status=404)
-    password = body.get('password', None)
-    if password == None:
+
+    password = body.get('password')
+    if password is None:
         return JsonResponse({'error': 'Missing password in request body'}, status=400)
+
+    # Comprobando si la contraseña es válida
     if bcrypt.checkpw(password.encode('utf8'), user.encrypted_password.encode('utf8')):
         new_session = UserSession()
         new_session.user = user
         new_session.token = secrets.token_hex(10)
         new_session.save()
-        return JsonResponse({'created': 'True', 'sessionId': new_session.id, 'sessionToken': new_session.token},
-                            status=201)
+        return JsonResponse({
+            'created': 'True',
+            'sessionId': new_session.id,
+            'sessionToken': new_session.token
+        }, status=201)
     else:
         return JsonResponse({'error': 'Password is invalid'}, status=401)
+
 
 def __get_logged_user(request):
     session_token = request.headers.get(SESSION_TOKEN_HEADER, None)

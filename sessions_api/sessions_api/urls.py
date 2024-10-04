@@ -21,5 +21,5 @@ from cocktailapp import endpoints
 
 urlpatterns = [
     path('sessions',endpoints.login),
-    path('users/', endpoints.register),
+    path('users', endpoints.register),
 ]
