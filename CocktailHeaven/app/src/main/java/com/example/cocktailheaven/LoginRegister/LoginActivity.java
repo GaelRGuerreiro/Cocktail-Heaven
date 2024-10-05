@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
     private RequestQueue queue;
     private Activity activity = this;
 
-    static String host = "http://10.0.2.2:8000";
+    static String host = "http://192.168.1.127:8000";
 
 
     @Override
