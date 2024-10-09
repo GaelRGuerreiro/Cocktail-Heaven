@@ -25,6 +25,17 @@ public class CoctelesData {
         this.ingredientes = ingredientes;
         this.medidas = medidas;
     }
+    public CoctelesData(String id, String nombreCoctel, String imageUrl){
+        this.id = id;
+        this.nombreCoctel = nombreCoctel;
+        this.imageUrl = imageUrl;
+        this.categoria = "";
+        this.alcohol = "";
+        this.vaso = "";
+        this.instrucciones = "";
+        this.ingredientes = new ArrayList<>();
+        this.medidas = new ArrayList<>();
+    }
 
     public String getId() {
         return id;

@@ -95,9 +95,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Alcoholicas"
-        app:layout_constraintBottom_toBottomOf="@+id/themeSwitch"
-        app:layout_constraintEnd_toStartOf="@+id/themeSwitch"
-        app:layout_constraintTop_toTopOf="@+id/themeSwitch" />
+        app:layout_constraintBottom_toBottomOf="@+id/alcolSwitch"
+        app:layout_constraintEnd_toStartOf="@+id/alcolSwitch"
+        app:layout_constraintTop_toTopOf="@+id/alcolSwitch" />
 
     <TextView
         android:id="@+id/textView"
@@ -105,12 +105,12 @@
         android:layout_height="wrap_content"
         android:text="No Alcoholicas"
 
-        app:layout_constraintBottom_toBottomOf="@+id/themeSwitch"
+        app:layout_constraintBottom_toBottomOf="@+id/alcolSwitch"
         app:layout_constraintEnd_toEndOf="@+id/coctel_recycler"
-        app:layout_constraintTop_toTopOf="@+id/themeSwitch" />
+        app:layout_constraintTop_toTopOf="@+id/alcolSwitch" />
 
     <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/themeSwitch"
+        android:id="@+id/alcolSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/botonRandom"
@@ -118,4 +118,18 @@
         app:layout_constraintTop_toTopOf="@+id/botonRandom"
         app:layout_constraintVertical_bias="0.0" />
 
+
+    <ImageView
+        android:id="@+id/loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/coctel_recycler"
+        app:layout_constraintTop_toTopOf="@+id/coctel_recycler" />
 </androidx.constraintlayout.widget.ConstraintLayout>
