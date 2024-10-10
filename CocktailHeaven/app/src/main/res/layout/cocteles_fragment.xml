@@ -58,37 +58,11 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
-        app:layout_constraintBottom_toTopOf="@id/nextButton"
+        app:layout_constraintBottom_toTopOf="@id/barra_letras"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botonRandom" />
 
-    <ImageButton
-        android:id="@+id/prevButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="20dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:scaleType="centerCrop"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/nextButton"
-        app:layout_constraintStart_toStartOf="@id/coctel_recycler" />
-    <!-- Botón de flecha derecha -->
-    <ImageButton
-        android:id="@+id/nextButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="20dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/coctel_recycler"
-        app:layout_constraintStart_toEndOf="@+id/prevButton" />
 
     <TextView
         android:id="@+id/textView2"
@@ -129,7 +103,467 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/coctel_recycler"
         app:layout_constraintTop_toTopOf="@+id/coctel_recycler" />
+
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/barra_letras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:flexWrap="wrap"
+        app:justifyContent="center"
+        app:alignItems="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/letter_A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/letter_B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <!-- Letra C -->
+        <TextView
+            android:id="@+id/letter_C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+
+        <!-- Barra entre letras -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <!-- Letra D -->
+        <TextView
+            android:id="@+id/letter_D"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+
+        <!-- Barra entre letras -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <!-- Letra E -->
+        <TextView
+            android:id="@+id/letter_E"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+
+        <!-- Barra entre letras -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <!-- Continúa añadiendo las letras F hasta Z -->
+        <!-- Aquí tienes las letras restantes -->
+
+        <TextView
+            android:id="@+id/letter_F"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/letter_G"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="G"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/letter_H"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="H"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/letter_I"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/letter_J"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="J"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/letter_K"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="K"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/letter_L"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="L"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/letter_M"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/letter_N"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/letter_O"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/letter_P"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/letter_Q"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/letter_R"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/letter_S"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/letter_T"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/letter_U"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="U"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/letter_V"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="V"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/letter_W"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="W"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/letter_X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/letter_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/letter_Z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:clickable="true" />
+    </com.google.android.flexbox.FlexboxLayout>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

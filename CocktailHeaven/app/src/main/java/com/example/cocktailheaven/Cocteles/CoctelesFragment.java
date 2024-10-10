@@ -109,12 +109,14 @@ public class CoctelesFragment extends Fragment{
 
         alcohol = view.findViewById(R.id.alcolSwitch);
 
+//        sendCoctelRequest("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic");
+
+
         alcohol.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     String peticion;
 
-                    // If the switch is checked, it's alcoholic, otherwise non-alcoholic
                     if (isChecked) {
                         peticion = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic";
                     } else {
@@ -130,7 +132,7 @@ public class CoctelesFragment extends Fragment{
 
         public void sendCoctelRequest (String url){
 
-            loadingImage.setVisibility(View.VISIBLE);
+            loadingImage.setVisibility(View.GONE);
 
             JsonObjectRequest request = new JsonObjectRequest(
                     Request.Method.GET,
@@ -141,6 +143,7 @@ public class CoctelesFragment extends Fragment{
                         public void onResponse(JSONObject response) {
 
                             loadingImage.setVisibility(View.GONE);
+
 
 
                             // Llamar al método parseJson para parsear la respuesta JSON

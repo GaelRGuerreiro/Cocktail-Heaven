@@ -18,7 +18,7 @@ public class CoctelesViewHolder extends RecyclerView.ViewHolder {
     public CoctelesViewHolder(@NonNull View itemView){
         super(itemView);
 
-        coctelImageView = itemView.findViewById(R.id.coctelNameTextView);
+        coctelImageView = itemView.findViewById(R.id.ccoctelImageview);
         coctelNameTextView = itemView.findViewById(R.id.coctelNameTextView);
 
 
