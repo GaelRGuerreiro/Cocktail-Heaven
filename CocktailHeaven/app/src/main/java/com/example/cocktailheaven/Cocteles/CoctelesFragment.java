@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.EditText;
 
@@ -50,22 +51,51 @@ public class CoctelesFragment extends Fragment{
     public EditText campoTexto;
     private ImageView loadingImage;
     private SwitchCompat alcohol;
+    private static final String url="https://www.thecocktaildb.com/api/json/v1/1/search.php?f=";
 
-    @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activity = getActivity();
     }
 
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View layout = inflater.inflate(R.layout.cocteles_fragment, container, false);
+
+        setupLetterClickListener(layout,R.id.letter_A, "A");
+        setupLetterClickListener(layout,R.id.letter_B, "B");
+        setupLetterClickListener(layout,R.id.letter_C, "C");
+        setupLetterClickListener(layout,R.id.letter_D, "D");
+        setupLetterClickListener(layout,R.id.letter_E, "E");
+        setupLetterClickListener(layout,R.id.letter_F, "F");
+        setupLetterClickListener(layout,R.id.letter_G, "G");
+        setupLetterClickListener(layout,R.id.letter_H, "H");
+        setupLetterClickListener(layout,R.id.letter_I, "I");
+        setupLetterClickListener(layout,R.id.letter_J, "J");
+        setupLetterClickListener(layout,R.id.letter_K, "K");
+        setupLetterClickListener(layout,R.id.letter_L, "L");
+        setupLetterClickListener(layout,R.id.letter_M, "M");
+        setupLetterClickListener(layout,R.id.letter_N, "N");
+        setupLetterClickListener(layout,R.id.letter_O, "O");
+        setupLetterClickListener(layout,R.id.letter_P, "P");
+        setupLetterClickListener(layout,R.id.letter_Q, "Q");
+        setupLetterClickListener(layout,R.id.letter_R, "R");
+        setupLetterClickListener(layout,R.id.letter_S, "S");
+        setupLetterClickListener(layout,R.id.letter_T, "T");
+        setupLetterClickListener(layout,R.id.letter_U, "U");
+        setupLetterClickListener(layout,R.id.letter_V, "V");
+        setupLetterClickListener(layout,R.id.letter_W, "W");
+        setupLetterClickListener(layout,R.id.letter_X, "X");
+        setupLetterClickListener(layout,R.id.letter_Y, "Y");
+        setupLetterClickListener(layout,R.id.letter_Z, "Z");
+
+
 
         campoTexto = layout.findViewById(R.id.busqueda);
         loadingImage = layout.findViewById(R.id.loading);
         DrawableImageViewTarget imageViewTarget = new DrawableImageViewTarget(loadingImage);
         Glide.with(requireActivity()).load(R.drawable.loading).into(imageViewTarget);
         lupa = layout.findViewById(R.id.lupa);
-        alcohol = layout.findViewById(R.id.alcolSwitch);
 
         campoTexto.addTextChangedListener(new TextWatcher() {
             @Override
@@ -107,28 +137,25 @@ public class CoctelesFragment extends Fragment{
 
         View view = inflater.inflate(R.layout.cocteles_fragment, container, false);
 
-        alcohol = view.findViewById(R.id.alcolSwitch);
-
-//        sendCoctelRequest("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic");
-
-
-        alcohol.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    String peticion;
-
-                    if (isChecked) {
-                        peticion = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic";
-                    } else {
-                        peticion = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic";
-                    }
-
-                    sendCoctelRequest(peticion);
-                }
-            });
-
             return layout;
         }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        sendCoctelRequest(url+"a");
+    }
+    private void setupLetterClickListener(View layout,int letraId, final String letra) {
+
+        TextView letraTextView = layout.findViewById(letraId);
+        letraTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendCoctelRequest(url+letra.toLowerCase());
+            }
+        });
+    }
 
         public void sendCoctelRequest (String url){
 
@@ -174,6 +201,12 @@ public class CoctelesFragment extends Fragment{
             queue.add(request);
 
         }
+
+
+
+
+
+
     private List<CoctelesData> parseJson(JSONObject response)  {
         List<CoctelesData> coctelesList = new ArrayList<>();
 

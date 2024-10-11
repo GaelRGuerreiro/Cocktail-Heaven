@@ -40,57 +40,35 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/botonRandom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Coctel Random"
-        app:layout_constraintStart_toStartOf="@+id/coctel_recycler"
-        app:layout_constraintTop_toBottomOf="@+id/barrabusqueda">
+<!--    <Button-->
+<!--        android:id="@+id/botonRandom"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="Coctel Random"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/coctel_recycler"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/coctel_recycler"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/barrabusqueda">-->
 
-    </Button>
+<!--    </Button>-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/coctel_recycler"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         app:layout_constraintBottom_toTopOf="@id/barra_letras"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botonRandom" />
+        app:layout_constraintTop_toBottomOf="@+id/barrabusqueda" />
 
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Alcoholicas"
-        app:layout_constraintBottom_toBottomOf="@+id/alcolSwitch"
-        app:layout_constraintEnd_toStartOf="@+id/alcolSwitch"
-        app:layout_constraintTop_toTopOf="@+id/alcolSwitch" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No Alcoholicas"
 
-        app:layout_constraintBottom_toBottomOf="@+id/alcolSwitch"
-        app:layout_constraintEnd_toEndOf="@+id/coctel_recycler"
-        app:layout_constraintTop_toTopOf="@+id/alcolSwitch" />
 
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/alcolSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/botonRandom"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/botonRandom"
-        app:layout_constraintVertical_bias="0.0" />
+
+
 
 
     <ImageView
@@ -102,7 +80,6 @@
         android:layout_marginRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/coctel_recycler"
         app:layout_constraintTop_toTopOf="@+id/coctel_recycler" />
@@ -112,7 +89,7 @@
         android:id="@+id/barra_letras"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:padding="4dp"
         app:flexWrap="wrap"
         app:justifyContent="center"
         app:alignItems="center"
@@ -123,17 +100,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:padding="5dp"
             android:textColor="@color/black"
-            android:clickable="true" />
+            android:clickable="true"
+           />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
 
         <TextView
@@ -149,9 +127,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
 
         <!-- Letra C -->
@@ -165,15 +143,13 @@
             android:textColor="@color/black"
             android:clickable="true" />
 
-        <!-- Barra entre letras -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
-
         <!-- Letra D -->
         <TextView
             android:id="@+id/letter_D"
@@ -185,15 +161,13 @@
             android:textColor="@color/black"
             android:clickable="true" />
 
-        <!-- Barra entre letras -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
-
         <!-- Letra E -->
         <TextView
             android:id="@+id/letter_E"
@@ -205,17 +179,14 @@
             android:textColor="@color/black"
             android:clickable="true" />
 
-        <!-- Barra entre letras -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
 
-        <!-- Continúa añadiendo las letras F hasta Z -->
-        <!-- Aquí tienes las letras restantes -->
 
         <TextView
             android:id="@+id/letter_F"
@@ -230,11 +201,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
-
         <TextView
             android:id="@+id/letter_G"
             android:layout_width="wrap_content"
@@ -244,13 +214,12 @@
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
 
         <TextView
@@ -266,11 +235,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
-
         <TextView
             android:id="@+id/letter_I"
             android:layout_width="wrap_content"
@@ -284,9 +252,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
 
         <TextView
@@ -301,11 +269,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
-
         <TextView
             android:id="@+id/letter_K"
             android:layout_width="wrap_content"
@@ -318,9 +285,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
 
         <TextView
@@ -335,9 +302,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
 
         <TextView
@@ -353,9 +320,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
         <TextView
             android:id="@+id/letter_N"
@@ -369,9 +336,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
         <TextView
             android:id="@+id/letter_O"
@@ -383,12 +350,12 @@
             android:textColor="@color/black"
             android:clickable="true" />
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
-            android:textColor="@color/black" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:textSize="15sp"
+        android:padding="1dp"
+        android:textColor="@color/black" />
         <TextView
             android:id="@+id/letter_P"
             android:layout_width="wrap_content"
@@ -401,9 +368,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
         <TextView
             android:id="@+id/letter_Q"
@@ -417,9 +384,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
         <TextView
             android:id="@+id/letter_R"
@@ -433,9 +400,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
         <TextView
             android:id="@+id/letter_S"
@@ -449,9 +416,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
         <TextView
             android:id="@+id/letter_T"
@@ -465,9 +432,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
         <TextView
             android:id="@+id/letter_U"
@@ -481,9 +448,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
         <TextView
             android:id="@+id/letter_V"
@@ -497,9 +464,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
         <TextView
             android:id="@+id/letter_W"
@@ -513,9 +480,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
         <TextView
             android:id="@+id/letter_X"
@@ -529,9 +496,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
         <TextView
             android:id="@+id/letter_Y"
@@ -547,9 +514,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
-            android:padding="5dp"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
             android:textColor="@color/black" />
 
         <TextView
