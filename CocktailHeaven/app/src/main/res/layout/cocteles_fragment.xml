@@ -100,7 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="A"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true"
@@ -119,7 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="B"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -138,7 +138,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="C"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -156,7 +156,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="D"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -174,7 +174,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="E"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -193,7 +193,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="F"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -210,7 +210,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="G"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -227,7 +227,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="H"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -244,7 +244,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="I"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -262,7 +262,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="J"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -278,7 +278,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="K"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -295,7 +295,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="L"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -312,7 +312,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="M"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -329,7 +329,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="N"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -345,7 +345,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="O"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -361,7 +361,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="P"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -377,7 +377,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Q"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -393,7 +393,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="R"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -409,7 +409,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="S"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -425,7 +425,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="T"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -441,7 +441,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="U"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -457,7 +457,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="V"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -473,7 +473,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="W"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -489,7 +489,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="X"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -505,7 +505,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Y"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
@@ -524,7 +524,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Z"
-            android:textSize="15dp"
+            android:textSize="20sp"
             android:padding="5dp"
             android:textColor="@color/black"
             android:clickable="true" />
