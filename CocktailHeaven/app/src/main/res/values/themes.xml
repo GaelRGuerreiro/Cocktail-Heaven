@@ -2,12 +2,23 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.CocktailHeaven" parent="Theme.Material3.DayNight.NoActionBar">
 
-        <item name="colorPrimary">#721422</item>
+        <item name="colorPrimary">#3A0820</item>
 
-        <item name="colorAccent">#5B2E57</item>
+        <item name="colorAccent">#FFFFFF</item>
+        <item name="android:fontFamily">@font/deaetnatext</item>
+
 
 
     </style>
 
     <style name="Theme.CocktailHeaven" parent="Base.Theme.CocktailHeaven" />
+
+
+    <style name="BottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextColor">@color/button</item>
+        <item name="itemIconTint">@color/black</item>
+
+    </style>
+
+
 </resources>

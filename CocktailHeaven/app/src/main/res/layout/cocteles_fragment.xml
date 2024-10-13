@@ -1,15 +1,610 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Cocteles.CoctelesFragment">
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/barrabusqueda"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/coctel_recycler"
+        app:layout_constraintStart_toStartOf="@+id/coctel_recycler"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/busqueda"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/lupa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/lupa"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/lupa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/busqueda" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/botonRandom"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="Coctel Random"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/coctel_recycler"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/coctel_recycler"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/barrabusqueda">-->
+
+<!--    </Button>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/coctel_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toTopOf="@id/barra_letras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrabusqueda" />
 
 
-    <TextView
+
+
+
+
+
+
+
+    <ImageView
+        android:id="@+id/loading"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/coctel_recycler"
+        app:layout_constraintTop_toTopOf="@+id/coctel_recycler" />
+
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/barra_letras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        app:flexWrap="wrap"
+        app:justifyContent="center"
+        app:alignItems="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/letter_A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/letter_B"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+
+        <!-- Letra C -->
+        <TextView
+            android:id="@+id/letter_C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <!-- Letra D -->
+        <TextView
+            android:id="@+id/letter_D"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="D"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <!-- Letra E -->
+        <TextView
+            android:id="@+id/letter_E"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+
+
+        <TextView
+            android:id="@+id/letter_F"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/letter_G"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="G"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/letter_H"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="H"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/letter_I"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/letter_J"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="J"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/letter_K"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="K"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/letter_L"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="L"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/letter_M"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/letter_N"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/letter_O"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="COCTELES" />
+        android:text="|"
+        android:textSize="15sp"
+        android:padding="1dp"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/letter_P"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/letter_Q"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/letter_R"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/letter_S"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/letter_T"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/letter_U"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="U"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/letter_V"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="V"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/letter_W"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="W"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/letter_X"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:id="@+id/letter_Y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textSize="15sp"
+            android:padding="1dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/letter_Z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:clickable="true" />
+    </com.google.android.flexbox.FlexboxLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
