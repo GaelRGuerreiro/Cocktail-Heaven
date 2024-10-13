@@ -37,7 +37,26 @@ public class CoctelesViewAdapter extends RecyclerView.Adapter<CoctelesViewHolder
     public void onBindViewHolder(@NonNull CoctelesViewHolder holder, int position) {
         CoctelesData dataForThisCell = cocteles.get(position);
         holder.bind(dataForThisCell);
-    }
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Context context = v.getContext();
+                Intent intent = new Intent(context, CoctelDetail.class);
+
+                intent.putExtra("idDrink", dataForThisCell.getId());
+                intent.putExtra("strDrink", dataForThisCell.getNombreCoctel());
+                intent.putExtra("strCategory", dataForThisCell.getCategoria());
+                intent.putExtra("strDrinkThumb", dataForThisCell.getImageUrl());
+                intent.putExtra("strGlass", dataForThisCell.getVaso());
+                intent.putExtra("strAlcoholic", dataForThisCell.getAlcohol());
+
+                context.startActivity(intent);
+            }
+            });
+            }
+
+
 
     @Override
     public int getItemCount() {

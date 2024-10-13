@@ -4,8 +4,8 @@
 
         <item name="colorPrimary">#3A0820</item>
 
-        <item name="colorAccent">#5B2E57</item>
-        <item name="android:fontFamily">@font/boskyevanish</item>
+        <item name="colorAccent">#FFFFFF</item>
+        <item name="android:fontFamily">@font/deaetnatext</item>
 
 
 

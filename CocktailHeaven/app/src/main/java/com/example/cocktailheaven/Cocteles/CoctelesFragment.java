@@ -219,9 +219,15 @@ public class CoctelesFragment extends Fragment{
                 String id = drink.getString("idDrink");
                 String nombreCoctel = drink.getString("strDrink");
                 String imageUrl = drink.getString("strDrinkThumb");
+                String categoriaCoctel = drink.getString("strCategory");
+                String alcoholCoctel = drink.getString("strAlcoholic");
+                String vasoCoctel = drink.getString("strGlass");
+
+
+
 
                 // Crea un objeto CoctelData solo con los datos necesarios
-                CoctelesData coctel = new CoctelesData(id, nombreCoctel, imageUrl);
+                CoctelesData coctel = new CoctelesData(id, nombreCoctel, imageUrl,categoriaCoctel,alcoholCoctel,vasoCoctel);
 
                 // Añade el cóctel a la lista
                 coctelesList.add(coctel);

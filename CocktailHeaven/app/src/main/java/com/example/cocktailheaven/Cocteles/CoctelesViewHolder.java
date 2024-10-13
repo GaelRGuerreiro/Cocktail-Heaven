@@ -15,20 +15,18 @@ public class CoctelesViewHolder extends RecyclerView.ViewHolder {
     private TextView coctelNameTextView;
     private ImageView coctelImageView;
 
+
     public CoctelesViewHolder(@NonNull View itemView){
         super(itemView);
 
-        coctelImageView = itemView.findViewById(R.id.ccoctelImageview);
+        coctelImageView = itemView.findViewById(R.id.coctelImageview);
         coctelNameTextView = itemView.findViewById(R.id.coctelNameTextView);
-
-
 
     }
 
     public void bind(CoctelesData dataForThisCell){
 
         coctelNameTextView.setText(dataForThisCell.getNombreCoctel());
-
         Util.downloadBitmapToImageView(dataForThisCell.getImageUrl(), coctelImageView);
 
     }

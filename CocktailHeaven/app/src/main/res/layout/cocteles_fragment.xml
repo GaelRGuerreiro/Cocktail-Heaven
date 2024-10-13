@@ -24,6 +24,7 @@
                 android:layout_height="50dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/lupa"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -102,9 +103,11 @@
             android:text="A"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:clickable="true"
-           />
+            android:textStyle="bold"
+
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -112,7 +115,8 @@
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
 
         <TextView
             android:id="@+id/letter_B"
@@ -121,8 +125,10 @@
             android:text="B"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -130,7 +136,8 @@
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
 
         <!-- Letra C -->
         <TextView
@@ -140,8 +147,10 @@
             android:text="C"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -149,7 +158,8 @@
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <!-- Letra D -->
         <TextView
             android:id="@+id/letter_D"
@@ -158,8 +168,10 @@
             android:text="D"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -167,7 +179,8 @@
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <!-- Letra E -->
         <TextView
             android:id="@+id/letter_E"
@@ -176,8 +189,10 @@
             android:text="E"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -185,7 +200,8 @@
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
 
 
         <TextView
@@ -195,8 +211,10 @@
             android:text="F"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -204,7 +222,8 @@
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <TextView
             android:id="@+id/letter_G"
             android:layout_width="wrap_content"
@@ -212,15 +231,18 @@
             android:text="G"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
 
         <TextView
             android:id="@+id/letter_H"
@@ -229,8 +251,10 @@
             android:text="H"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -238,7 +262,8 @@
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <TextView
             android:id="@+id/letter_I"
             android:layout_width="wrap_content"
@@ -246,8 +271,10 @@
             android:text="I"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -255,7 +282,8 @@
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
 
         <TextView
             android:id="@+id/letter_J"
@@ -264,15 +292,18 @@
             android:text="J"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <TextView
             android:id="@+id/letter_K"
             android:layout_width="wrap_content"
@@ -280,15 +311,18 @@
             android:text="K"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
 
         <TextView
             android:id="@+id/letter_L"
@@ -297,15 +331,18 @@
             android:text="L"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
 
         <TextView
             android:id="@+id/letter_M"
@@ -314,8 +351,10 @@
             android:text="M"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -323,7 +362,8 @@
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <TextView
             android:id="@+id/letter_N"
             android:layout_width="wrap_content"
@@ -331,15 +371,18 @@
             android:text="N"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <TextView
             android:id="@+id/letter_O"
             android:layout_width="wrap_content"
@@ -347,15 +390,17 @@
             android:text="O"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="|"
         android:textSize="15sp"
         android:padding="1dp"
-        android:textColor="@color/black" />
+            android:textColor="@color/white" />
         <TextView
             android:id="@+id/letter_P"
             android:layout_width="wrap_content"
@@ -363,15 +408,18 @@
             android:text="P"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <TextView
             android:id="@+id/letter_Q"
             android:layout_width="wrap_content"
@@ -379,15 +427,18 @@
             android:text="Q"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <TextView
             android:id="@+id/letter_R"
             android:layout_width="wrap_content"
@@ -395,15 +446,18 @@
             android:text="R"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <TextView
             android:id="@+id/letter_S"
             android:layout_width="wrap_content"
@@ -411,15 +465,18 @@
             android:text="S"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <TextView
             android:id="@+id/letter_T"
             android:layout_width="wrap_content"
@@ -427,15 +484,18 @@
             android:text="T"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <TextView
             android:id="@+id/letter_U"
             android:layout_width="wrap_content"
@@ -443,15 +503,18 @@
             android:text="U"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <TextView
             android:id="@+id/letter_V"
             android:layout_width="wrap_content"
@@ -459,15 +522,18 @@
             android:text="V"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <TextView
             android:id="@+id/letter_W"
             android:layout_width="wrap_content"
@@ -475,15 +541,18 @@
             android:text="W"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <TextView
             android:id="@+id/letter_X"
             android:layout_width="wrap_content"
@@ -491,15 +560,18 @@
             android:text="X"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white"
+            />
         <TextView
             android:id="@+id/letter_Y"
             android:layout_width="wrap_content"
@@ -507,9 +579,10 @@
             android:text="Y"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
-            android:clickable="true" />
-
+            android:textColor="@color/white"
+            android:clickable="true"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -517,7 +590,7 @@
             android:text="|"
             android:textSize="15sp"
             android:padding="1dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/letter_Z"
@@ -526,7 +599,8 @@
             android:text="Z"
             android:textSize="20sp"
             android:padding="5dp"
-            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             android:clickable="true" />
     </com.google.android.flexbox.FlexboxLayout>
 

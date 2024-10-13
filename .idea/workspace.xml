@@ -10,57 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa8786df-fdeb-41df-a943-2ac0e3d10b64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/androidTest/java/com/example/cocktailheaven/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/java/com/example/cocktailheaven/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/java/com/example/cocktailheaven/ui/dashboard/DashboardFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/java/com/example/cocktailheaven/ui/dashboard/DashboardViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/java/com/example/cocktailheaven/ui/home/HomeFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/java/com/example/cocktailheaven/ui/home/HomeViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/java/com/example/cocktailheaven/ui/notifications/NotificationsFragment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/java/com/example/cocktailheaven/ui/notifications/NotificationsViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/drawable/ic_home_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/drawable/ic_notifications_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/layout/fragment_dashboard.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/layout/fragment_notifications.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/test/java/com/example/cocktailheaven/ExampleUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CocktailHeaven/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/java/com/example/cocktailheaven/Cocteles/CoctelDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/drawable/fondo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/drawable/fondo2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/font/deaetnatext.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/font/destra.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/layout/activity_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CocktailHeaven/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CocktailHeaven/app/src/main/java/com/example/cocktailheaven/Cocteles/CoctelesViewAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/java/com/example/cocktailheaven/Cocteles/CoctelesViewAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CocktailHeaven/app/src/main/java/com/example/cocktailheaven/Cocteles/CoctelesViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/java/com/example/cocktailheaven/Cocteles/CoctelesViewHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/layout/cocteles_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/layout/cocteles_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CocktailHeaven/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +52,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/gaelr/Cocktail-Heaven/CocktailHeaven"
+    "last_opened_file_path": "C:/Users/gaelr/Cocktail-Heaven/CocktailHeaven",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RunManager">

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+        <!-- Imagen del cóctel -->
+    <ImageView
+        android:id="@+id/coctelImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Nombre del cóctel -->
+
+    <TextView
+        android:id="@+id/coctelNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cocktail Name"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/coctelImageView"
+        app:layout_constraintStart_toStartOf="@+id/coctelImageView"
+        app:layout_constraintTop_toBottomOf="@+id/coctelImageView" />
+
+    <TextView
+        android:id="@+id/coctel_category_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="categoria"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/alcoholic_detail"
+        app:layout_constraintStart_toStartOf="@+id/alcoholic_detail"
+        app:layout_constraintTop_toBottomOf="@+id/alcoholic_detail" />
+
+    <TextView
+        android:id="@+id/alcoholic_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="alcoholic"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/coctail_glass"
+        app:layout_constraintStart_toStartOf="@+id/coctail_glass"
+        app:layout_constraintTop_toBottomOf="@+id/coctail_glass"></TextView>
+
+    <TextView
+        android:id="@+id/coctail_glass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="vaso"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/coctelNameTextView"
+        app:layout_constraintStart_toStartOf="@+id/coctelNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/coctelNameTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
