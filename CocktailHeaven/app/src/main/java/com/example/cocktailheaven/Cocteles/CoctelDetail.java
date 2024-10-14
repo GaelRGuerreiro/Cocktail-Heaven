@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.cocktailheaven.R;
 import com.example.cocktailheaven.Util;
+
+import java.util.ArrayList;
 
 public class CoctelDetail extends AppCompatActivity {
 
@@ -17,11 +20,15 @@ public class CoctelDetail extends AppCompatActivity {
     private TextView coctelAlcohol;
     private TextView coctelGlass;
     private TextView coctelCategory;
+    private Button recipeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.coctel_detail);
+
+
+        recipeButton = findViewById(R.id.button_recipe);
 
 
 
@@ -39,6 +46,8 @@ public class CoctelDetail extends AppCompatActivity {
         String alcohol = intent.getStringExtra("strAlcoholic");
         String glass = intent.getStringExtra("strGlass");
         String category =intent.getStringExtra("strCategory");
+        String receta = intent.getStringExtra("strInstructions");
+
 
         coctelNameTextView.setText(nombreCoctel);
         coctelCategory.setText(category);
@@ -47,6 +56,11 @@ public class CoctelDetail extends AppCompatActivity {
         Util.downloadBitmapToImageView(image,coctelImageView);
 
 
+        recipeButton.setOnClickListener(v -> {
+            Intent intent2 = new Intent(CoctelDetail.this, RecipeDetail.class);
+            intent2.putExtra("strInstructions", receta);
+            startActivity(intent2);
+        });
 
 
     }

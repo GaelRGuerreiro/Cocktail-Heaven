@@ -25,14 +25,14 @@ public class CoctelesData {
         this.ingredientes = ingredientes;
         this.medidas = medidas;
     }
-    public CoctelesData(String id, String nombreCoctel, String imageUrl,String categoria,String alcohol,String vaso){
+    public CoctelesData(String id, String nombreCoctel, String imageUrl,String categoria,String alcohol,String vaso,String instrucciones){
         this.id = id;
         this.nombreCoctel = nombreCoctel;
         this.imageUrl = imageUrl;
         this.categoria =categoria ;
         this.alcohol = alcohol;
         this.vaso = vaso;
-        this.instrucciones = "";
+        this.instrucciones = instrucciones;
         this.ingredientes = new ArrayList<>();
         this.medidas = new ArrayList<>();
     }

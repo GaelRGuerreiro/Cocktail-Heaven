@@ -50,6 +50,7 @@ public class CoctelesViewAdapter extends RecyclerView.Adapter<CoctelesViewHolder
                 intent.putExtra("strDrinkThumb", dataForThisCell.getImageUrl());
                 intent.putExtra("strGlass", dataForThisCell.getVaso());
                 intent.putExtra("strAlcoholic", dataForThisCell.getAlcohol());
+                intent.putExtra("strInstructions", dataForThisCell.getInstrucciones());
 
                 context.startActivity(intent);
             }

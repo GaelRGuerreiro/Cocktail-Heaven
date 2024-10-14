@@ -18,6 +18,8 @@
         <activity
             android:name=".Cocteles.CoctelDetail"
             android:exported="false" />
+        <activity android:name=".Cocteles.RecipeDetail"
+            android:exported="false"/>
         <activity
             android:name=".Cocteles.CoctelesFragment"
             android:exported="false"
