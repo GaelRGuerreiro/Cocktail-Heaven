@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.EditText;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SwitchCompat;
@@ -53,10 +54,14 @@ public class CoctelesFragment extends Fragment{
     private SwitchCompat alcohol;
     private static final String url="https://www.thecocktaildb.com/api/json/v1/1/search.php?f=";
 
+
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activity = getActivity();
     }
+
+
+
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -97,6 +102,17 @@ public class CoctelesFragment extends Fragment{
         Glide.with(requireActivity()).load(R.drawable.loading).into(imageViewTarget);
         lupa = layout.findViewById(R.id.lupa);
 
+
+
+
+        lupa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                busqueda = campoTexto.getText().toString();
+                sendSearchRequest(busqueda);
+            }
+        });
+
         campoTexto.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -111,12 +127,12 @@ public class CoctelesFragment extends Fragment{
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
             public void afterTextChanged(Editable s) {
                 if (s.length() == 0) {
+
                     Activity activity = getActivity();
                     if (activity instanceof MainActivity) {
 
@@ -159,7 +175,7 @@ public class CoctelesFragment extends Fragment{
 
         public void sendCoctelRequest (String url){
 
-            loadingImage.setVisibility(View.GONE);
+            loadingImage.setVisibility(View.VISIBLE);
 
             JsonObjectRequest request = new JsonObjectRequest(
                     Request.Method.GET,
@@ -201,6 +217,47 @@ public class CoctelesFragment extends Fragment{
             queue.add(request);
 
         }
+
+
+
+    public void sendSearchRequest(String search){
+        JsonObjectRequest request = new JsonObjectRequest(
+                Request.Method.GET,
+                "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+search,
+                null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+
+
+                        List<CoctelesData> coctelesDataArray = null;
+                        coctelesDataArray = parseJson(response);
+
+
+
+                        if (coctelesDataArray != null) {
+
+                            CoctelesViewAdapter adapter = new CoctelesViewAdapter(coctelesDataArray, activity);
+                            recyclerView.setAdapter(adapter);
+                            recyclerView.setLayoutManager(new GridLayoutManager(activity,2));
+
+                        } else {
+
+                            Toast.makeText(activity, "Error al parsear la respuesta JSON", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(activity, "No existen cocteles con dicho nombre.",Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+
+        RequestQueue queue = Volley.newRequestQueue(activity);
+        queue.add(request);
+    }
 
 
 
