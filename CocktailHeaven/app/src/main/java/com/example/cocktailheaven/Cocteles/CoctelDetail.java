@@ -47,6 +47,10 @@ public class CoctelDetail extends AppCompatActivity {
         String glass = intent.getStringExtra("strGlass");
         String category =intent.getStringExtra("strCategory");
         String receta = intent.getStringExtra("strInstructions");
+        ArrayList<String> ingredientes = intent.getStringArrayListExtra("Ingredientes");
+        ArrayList<String> medidas = intent.getStringArrayListExtra("Medidas");
+
+
 
 
         coctelNameTextView.setText(nombreCoctel);
@@ -59,6 +63,9 @@ public class CoctelDetail extends AppCompatActivity {
         recipeButton.setOnClickListener(v -> {
             Intent intent2 = new Intent(CoctelDetail.this, RecipeDetail.class);
             intent2.putExtra("strInstructions", receta);
+            intent2.putExtra("Ingredientes",ingredientes);
+            intent2.putExtra("Medidas",medidas);
+            intent2.putExtra("Imagen",image);
             startActivity(intent2);
         });
 

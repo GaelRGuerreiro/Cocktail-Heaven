@@ -214,6 +214,8 @@ public class CoctelesFragment extends Fragment{
             JSONArray drinks = response.getJSONArray("drinks");
 
 
+
+
             for (int i = 0; i < drinks.length(); i++) {
                 JSONObject drink = drinks.getJSONObject(i);
                 String id = drink.getString("idDrink");
@@ -224,13 +226,24 @@ public class CoctelesFragment extends Fragment{
                 String vasoCoctel = drink.getString("strGlass");
                 String receta = drink.getString("strInstructions");
 
+                ArrayList<String> ingredientes = new ArrayList<>();
+                ArrayList<String> medidas = new ArrayList<>();
 
+                for (int j = 1; j <= 15; j++) {
+                    String ingrediente = drink.optString("strIngredient" + j, null);
+                    String medida = drink.optString("strMeasure" + j, null);
 
+                    if (ingrediente != null && !ingrediente.isEmpty() && ingrediente != "null") {
+                        ingredientes.add(ingrediente);
+                    }
+                    if (medida != null && !medida.isEmpty() && medida!="null") {
 
-                // Crea un objeto CoctelData solo con los datos necesarios
-                CoctelesData coctel = new CoctelesData(id, nombreCoctel, imageUrl,categoriaCoctel,alcoholCoctel,vasoCoctel,receta);
+                        medidas.add(medida);
+                    }
+                }
 
-                // Añade el cóctel a la lista
+                // Crear objeto CoctelesData con las listas llenas
+                CoctelesData coctel = new CoctelesData(id, nombreCoctel, imageUrl, categoriaCoctel, alcoholCoctel, vasoCoctel, receta, ingredientes, medidas);
                 coctelesList.add(coctel);
             }
 

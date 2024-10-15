@@ -7,10 +7,35 @@
 
 
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardImagen"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
+        <ImageView
+            android:id="@+id/imagenCoctel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+    </androidx.cardview.widget.CardView>
 
 
 
@@ -19,13 +44,14 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Receta"
+        android:layout_marginTop="35dp"
+        android:text="Recipe"
         android:textColor="@color/white"
         android:textSize="45sp"
+        app:layout_constraintTop_toBottomOf="@+id/cardImagen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardGlass"
@@ -36,7 +62,7 @@
         app:cardElevation="20dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -54,12 +80,12 @@
                 android:gravity="center"
                 android:text="Instrucciones sobre como prepararse un coctel. Primero echamos el alcohol en el vaso, despues echamos mas alcohol en el vaso, y por ultimo, echamos un poco mas de alcohol en el vaso."
                 android:textColor="@color/white"
-                android:textSize="25sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -72,28 +98,40 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ingredientes"
+        android:layout_marginTop="30dp"
+        android:text="Ingredients"
         android:textColor="@color/white"
-        android:textSize="45sp"
-        android:layout_marginTop="20dp"
+        android:textSize="35sp"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/inRecyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/cardGlass" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Measures"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+
+        app:layout_constraintEnd_toEndOf="@+id/inRecyclerView"
         app:layout_constraintTop_toBottomOf="@+id/cardGlass" />
 
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/epRecyclerView"
+        android:id="@+id/inRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        android:layout_marginTop="10dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
