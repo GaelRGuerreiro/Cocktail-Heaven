@@ -3,13 +3,12 @@ package com.example.cocktailheaven.Cocteles;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.cocktailheaven.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class IngredienteAdapter extends RecyclerView.Adapter<IngredienteViewHolder> {
 
@@ -24,7 +23,7 @@ public class IngredienteAdapter extends RecyclerView.Adapter<IngredienteViewHold
     @NonNull
     @Override
     public IngredienteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.ingedientes_recycler_cell, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.in_recycler_cell, parent, false);
         return new IngredienteViewHolder(view);
     }
 
