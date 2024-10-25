@@ -12,9 +12,9 @@
         android:icon="@drawable/perfil"
         />
     <item
-        android:id="@+id/Ingredientes"
-        android:title="Ingredientes"
-        android:icon="@drawable/ingredientes"
+        android:id="@+id/Random"
+        android:title="Random"
+        android:icon="@drawable/random"
         />
 
 

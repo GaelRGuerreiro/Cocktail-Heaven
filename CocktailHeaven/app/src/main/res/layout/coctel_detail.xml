@@ -138,6 +138,7 @@
         android:textSize="45sp"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="@+id/cardImagen"
         app:layout_constraintStart_toStartOf="@+id/cardImagen"
         app:layout_constraintTop_toBottomOf="@+id/cardImagen" />
