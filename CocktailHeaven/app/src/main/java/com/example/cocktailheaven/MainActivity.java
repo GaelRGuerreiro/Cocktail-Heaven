@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.example.cocktailheaven.Cocteles.CoctelesFragment;
-import com.example.cocktailheaven.Ingredientes.IngredientesFragment;
+import com.example.cocktailheaven.Random.RandomFragment;
 import com.example.cocktailheaven.Perfil.PerfilFragment;
 
 import com.example.cocktailheaven.databinding.ActivityMainBinding;
@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
                 replaceFragment(new CoctelesFragment());
             } else if (item.getItemId() == R.id.Perfil) {
                 replaceFragment(new PerfilFragment());
-            } else if (item.getItemId() == R.id.Ingredientes) {
-                replaceFragment(new IngredientesFragment());
+            } else if (item.getItemId() == R.id.Random) {
+                replaceFragment(new RandomFragment());
             }
             return true;
         });
