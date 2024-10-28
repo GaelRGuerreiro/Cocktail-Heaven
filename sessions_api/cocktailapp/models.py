@@ -18,3 +18,12 @@ class UserSession(models.Model):
         return str(self.user) + ' - ' + self.token
 
 
+
+class FavoriteCocktail(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    cocktail_id = models.CharField(max_length=50)
+    cocktail_name = models.CharField(max_length=500)
+    cocktail_image_url = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.user)+'-'+ str(self.cocktail_name)
