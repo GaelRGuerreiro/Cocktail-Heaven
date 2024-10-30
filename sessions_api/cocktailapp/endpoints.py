@@ -3,7 +3,7 @@ import secrets
 import bcrypt
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from .models import CustomUser, UserSession
+from .models import CustomUser, UserSession, FavoriteCocktail
 
 SESSION_TOKEN_HEADER='Sesion-Token'
 
@@ -84,3 +84,61 @@ def __get_logged_user(request):
     except UserSession.DoesNotExist:
         return None
 
+
+@csrf_exempt
+def mark_unmark_favorite(request, cocktail_id):
+    user = __get_logged_user(request)
+    if user is None:
+        return JsonResponse({'error': 'User not authenticated'}, status=401)
+
+    if request.method == 'DELETE':
+        # Eliminar un cóctel de favoritos
+        try:
+            favorite_cocktail = FavoriteCocktail.objects.get(user=user, cocktail_id=cocktail_id)
+            favorite_cocktail.delete()
+            return JsonResponse({'ok': 'Removed from favorites'}, status=200)
+        except FavoriteCocktail.DoesNotExist:
+            return JsonResponse({'error': 'Cocktail not found in favorites'}, status=404)
+
+    elif request.method == 'PUT':
+        # Añadir un cóctel a favoritos
+        body = json.loads(request.body)
+        cocktail_name = body.get('cocktail_name')
+        cocktail_image_url = body.get('cocktail_image_url')
+
+        if not all([cocktail_name, cocktail_image_url]):
+            return JsonResponse({'error': 'Missing cocktail_name or cocktail_image_url in request body'}, status=400)
+
+        # Intentar eliminar si ya existe, para evitar duplicados
+        FavoriteCocktail.objects.filter(user=user, cocktail_id=cocktail_id).delete()
+
+        new_fav = FavoriteCocktail(
+            user=user,
+            cocktail_id=cocktail_id,
+            cocktail_name=cocktail_name,
+            cocktail_image_url=cocktail_image_url
+        )
+        new_fav.save()
+        return JsonResponse({'ok': 'Added to favorites'}, status=201)
+
+    else:
+        return JsonResponse({'error': 'Unsupported HTTP method'}, status=405)
+
+
+def favorite_cocktails(request):
+    user = __get_logged_user(request)
+    if user is None:
+        return JsonResponse({'error': 'User not authenticated'}, status=401)
+
+    if request.method == 'GET':
+        favorites = FavoriteCocktail.objects.filter(user=user)
+        favorites_list = [
+            {
+                'cocktail_id': fav.cocktail_id,
+                'cocktail_name': fav.cocktail_name,
+                'cocktail_image_url': fav.cocktail_image_url
+            } for fav in favorites
+        ]
+        return JsonResponse({'favorites': favorites_list}, status=200)
+
+    return JsonResponse({'error': 'Unsupported HTTP method'}, status=405)

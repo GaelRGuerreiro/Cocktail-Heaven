@@ -22,4 +22,7 @@ from cocktailapp import endpoints
 urlpatterns = [
     path('sessions',endpoints.login),
     path('users', endpoints.register),
+    path('favorites', endpoints.favorite_cocktails),
+    path('favorites/<int:cocktail_id>',endpoints.mark_unmark_favorite),
+
 ]
