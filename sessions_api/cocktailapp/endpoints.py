@@ -139,6 +139,10 @@ def favorite_cocktails(request):
                 'cocktail_image_url': fav.cocktail_image_url
             } for fav in favorites
         ]
-        return JsonResponse({'favorites': favorites_list}, status=200)
+        return JsonResponse({
+            'username': user.username,
+            'email': user.email,
+            'favorites': favorites_list
+        }, status=200)
 
-    return JsonResponse({'error': 'Unsupported HTTP method'}, status=405)
+        return JsonResponse({'error': 'Unsupported HTTP method'}, status=405)
