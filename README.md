@@ -1,6 +1,6 @@
 <h1 align="center">🍸 Cocktail Heaven 🍹</h1>
 <p align="center"> 
-  <img src=https://github.com/GaelRGuerreiro/Cocktail-Heaven/blob/main/logoCH.jpg>
+  <img src=https://github.com/GaelRGuerreiro/Cocktail-Heaven/blob/main/logoCH.jpeg>
 </p>
 
 
