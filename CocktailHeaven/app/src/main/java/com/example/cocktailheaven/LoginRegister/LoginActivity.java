@@ -55,15 +55,15 @@ public class LoginActivity extends AppCompatActivity {
 
 
         //Verificar si ya existe una sesión válida
-        /*SharedPreferences preferences = getSharedPreferences("USER_SESSIONS_PREFS", MODE_PRIVATE);
+        SharedPreferences preferences = getSharedPreferences("USER_SESSIONS_PREFS", MODE_PRIVATE);
         String validToken = preferences.getString("VALID_TOKEN", null);
         if (validToken != null) {
-             //Si el token es valido,se redirige al usuario a la MainActivity
+            //Si el token es valido,se redirige al usuario a la MainActivity
             Intent intent = new Intent(activity, MainActivity.class);
             startActivity(intent);
             finish();
             return;
-        }*/
+        }
 
         registrarse.setOnClickListener(new View.OnClickListener() {
             @Override
