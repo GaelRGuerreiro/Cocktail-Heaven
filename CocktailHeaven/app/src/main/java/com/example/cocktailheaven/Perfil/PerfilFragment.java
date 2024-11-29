@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -71,7 +72,9 @@ public class PerfilFragment extends Fragment {
 
         // Configuración del RecyclerView
         favoriteAdapter = new FavoriteAdapter(favoritesList);
-        favoritesRecyclerView.setLayoutManager(new LinearLayoutManager(context));
+
+        favoritesRecyclerView.setLayoutManager(new GridLayoutManager(context, 2));
+
         favoritesRecyclerView.setAdapter(favoriteAdapter);
 
         setupLogoutButton();

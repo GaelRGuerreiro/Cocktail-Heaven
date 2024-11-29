@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imagenPistola"
+        android:id="@+id/imagenLogo"
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:layout_marginTop="24dp"
@@ -39,9 +39,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
-        android:text="Nombre"
+        android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenPistola" />
+        app:layout_constraintTop_toBottomOf="@+id/imagenLogo" />
 
     <EditText
         android:id="@+id/editTextNombre"
@@ -50,7 +50,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:hint="Nombre"
+        android:hint="Name"
         android:inputType="text"
         android:maxLines="1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
-        android:text="Correo electrónico"
+        android:text="Email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNombre" />
 
@@ -74,7 +74,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:hint="Email"
+        android:hint="email@gmail.com"
         android:inputType="textEmailAddress"
         android:maxLines="1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
-        android:text="Contraseña"
+        android:text="Password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
@@ -98,7 +98,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:hint="Contraseña"
+        android:hint="Your_Password"
         android:inputType="textPassword"
         android:maxLines="1"
         app:layout_constraintEnd_toEndOf="parent"

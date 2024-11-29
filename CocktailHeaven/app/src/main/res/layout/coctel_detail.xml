@@ -195,7 +195,7 @@
         android:id="@+id/button_recipe"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Receta"
+        android:text="Recipe"
         android:textSize="35sp"
         android:layout_marginStart="30dp"
         app:layout_constraintBottom_toBottomOf="parent"

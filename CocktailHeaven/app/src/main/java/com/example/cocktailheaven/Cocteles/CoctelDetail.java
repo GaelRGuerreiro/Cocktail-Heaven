@@ -77,6 +77,8 @@ public class CoctelDetail extends AppCompatActivity {
         Util.downloadBitmapToImageView(image, coctelImageView);
 
         // Verificar si el cóctel ya está marcado como favorito
+        favSwitch.setOnCheckedChangeListener(null);
+
         checkIfFavorite(cocktailId);
 
         // Escuchar cambios en el switch de favoritos
@@ -146,7 +148,9 @@ public class CoctelDetail extends AppCompatActivity {
     }
 
     private void checkIfFavorite(String cocktailId) {
-        String url = host + "/favorites";
+        String url = host + "/favorites/" + cocktailId;
+
+        favSwitch.setOnCheckedChangeListener(null);
 
         JsonObjectRequest request = new JsonObjectRequest(
                 Request.Method.GET,
@@ -171,6 +175,7 @@ public class CoctelDetail extends AppCompatActivity {
         queue.add(request);
     }
 
+
     private Map<String, String> getAuthHeaders() {
         SharedPreferences preferences = getSharedPreferences("USER_SESSIONS_PREFS", MODE_PRIVATE);
         String sessionToken = preferences.getString("VALID_TOKEN", null);
@@ -188,10 +193,6 @@ public class CoctelDetail extends AppCompatActivity {
             int serverCode = error.networkResponse.statusCode;
             if (serverCode == 401) {
                 Toast.makeText(this, "No autenticado", Toast.LENGTH_SHORT).show();
-            } else if (serverCode == 404) {
-                Toast.makeText(this, "No encontrado", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(this, "Error: " + serverCode, Toast.LENGTH_SHORT).show();
             }
         }
     }

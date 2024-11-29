@@ -90,6 +90,7 @@ public class RandomFragment extends Fragment {
 
 
                                 Intent intent = new Intent(activity, CoctelDetail.class);
+                                intent.putExtra("idDrink", coctel.getId());
                                 intent.putExtra("strDrink", coctel.getNombreCoctel());
                                 intent.putExtra("strDrinkThumb", coctel.getImageUrl());
                                 intent.putExtra("strAlcoholic", coctel.getAlcohol());

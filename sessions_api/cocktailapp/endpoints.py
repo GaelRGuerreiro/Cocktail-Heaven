@@ -84,14 +84,18 @@ def __get_logged_user(request):
     except UserSession.DoesNotExist:
         return None
 
-
 @csrf_exempt
 def mark_unmark_favorite(request, cocktail_id):
     user = __get_logged_user(request)
     if user is None:
         return JsonResponse({'error': 'User not authenticated'}, status=401)
 
-    if request.method == 'DELETE':
+    if request.method == 'GET':
+        # Verificar si el cóctel está en favoritos
+        is_favorite = FavoriteCocktail.objects.filter(user=user, cocktail_id=cocktail_id).exists()
+        return JsonResponse({'favorite': is_favorite}, status=200)
+
+    elif request.method == 'DELETE':
         # Eliminar un cóctel de favoritos
         try:
             favorite_cocktail = FavoriteCocktail.objects.get(user=user, cocktail_id=cocktail_id)
@@ -123,7 +127,6 @@ def mark_unmark_favorite(request, cocktail_id):
 
     else:
         return JsonResponse({'error': 'Unsupported HTTP method'}, status=405)
-
 
 def favorite_cocktails(request):
     user = __get_logged_user(request)
