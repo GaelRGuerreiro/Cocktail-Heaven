@@ -3,12 +3,12 @@
 
     <item
         android:id="@+id/Cocteles"
-        android:title="Coctel"
+        android:title="Cocktails"
         android:icon="@drawable/coctel"
         />
     <item
         android:id="@+id/Perfil"
-        android:title="Perfil"
+        android:title="Profile"
         android:icon="@drawable/perfil"
         />
     <item

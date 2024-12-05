@@ -36,7 +36,7 @@
         style="@style/BottomNavigationStyle"
         app:menu="@menu/bottom_menu"
         app:labelVisibilityMode="labeled"
-        app:itemIconSize="22dp"
+        app:itemIconSize="25dp"
         app:itemTextColor="@color/white"
         app:itemIconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"

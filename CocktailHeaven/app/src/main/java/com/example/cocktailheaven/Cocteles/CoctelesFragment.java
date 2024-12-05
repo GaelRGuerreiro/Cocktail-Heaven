@@ -127,9 +127,17 @@ public class CoctelesFragment extends Fragment{
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
                 busqueda = campoTexto.getText().toString();
-                sendSearchRequest(busqueda);
+
+                if(busqueda.equals("")){
+                    
+                    sendCoctelRequest(url+"a");
+                }else{
+                    busqueda = campoTexto.getText().toString();
+                    sendSearchRequest(busqueda);
+
+                }
+
            }
 
             @Override
