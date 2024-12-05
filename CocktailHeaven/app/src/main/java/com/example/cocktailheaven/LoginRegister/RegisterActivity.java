@@ -21,6 +21,8 @@ import com.example.cocktailheaven.R;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
+
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText editTextUsername;
@@ -87,18 +89,33 @@ public class RegisterActivity extends AppCompatActivity {
                         } else {
                             try {
                                 int serverCode = error.networkResponse.statusCode;
-                                if (serverCode == 400) {
-                                    Toast.makeText(RegisterActivity.this, "Parece que alguno de los campos no esta bien cubierto", Toast.LENGTH_SHORT).show();
-                                }
+                                String errorMessage = new String(error.networkResponse.data, "UTF-8");
+                                JSONObject errorJson = new JSONObject(errorMessage);
+                                String errorText = errorJson.getString("error");
 
-                                if (serverCode == 409) {
-                                    Toast.makeText(RegisterActivity.this, "Ya existe una cuenta con este correo ", Toast.LENGTH_SHORT).show();
+                                if (serverCode == 400) {
+                                    Toast.makeText(RegisterActivity.this, "Completa correctamente todos los campos.", Toast.LENGTH_SHORT).show();
+                                } else if (serverCode == 409) {
+                                    if (errorText.equals("Username already in use")) {
+                                        Toast.makeText(RegisterActivity.this, "El nombre de usuario ya está en uso.", Toast.LENGTH_SHORT).show();
+                                    } else if (errorText.equals("Email already in use")) {
+                                        Toast.makeText(RegisterActivity.this, "El correo electrónico ya está registrado.", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        Toast.makeText(RegisterActivity.this, "Conflicto desconocido.", Toast.LENGTH_SHORT).show();
+                                    }
+                                } else {
+                                    Toast.makeText(RegisterActivity.this, "Error inesperado. Inténtalo de nuevo.", Toast.LENGTH_SHORT).show();
                                 }
-                            }catch (NullPointerException e){}
+                            } catch (Exception e) {
+                                Toast.makeText(RegisterActivity.this, "Error al procesar la respuesta.", Toast.LENGTH_LONG).show();
+                            }
                         }
                     }
+
+
                 }
         );
         this.queue.add(request);
+
     }
 }

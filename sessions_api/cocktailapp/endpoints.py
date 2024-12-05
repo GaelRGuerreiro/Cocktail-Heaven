@@ -1,44 +1,51 @@
-import json
 import secrets
-import bcrypt
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
 from .models import CustomUser, UserSession, FavoriteCocktail
 
 SESSION_TOKEN_HEADER='Sesion-Token'
 
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.db import IntegrityError
+import json
+import bcrypt
 
 @csrf_exempt
 def register(request):
     if request.method != 'POST':
         return JsonResponse({'error': 'Unsupported HTTP method'}, status=405)
-    body = json.loads(request.body)
-    new_username = body.get('username', None)
-    if new_username == None:
-        return JsonResponse({'error': 'Missing username in request body'}, status=400)
-    new_email = body.get('email', None)
-    if new_email == None:
-        return JsonResponse({'error': 'Missing email in request body'}, status=400)
+
+    # Parseamos el cuerpo de la solicitud
     try:
-        CustomUser.objects.get(username=new_username)
-        CustomUser.objects.get(email=new_email)
-    except CustomUser.DoesNotExist:
-        # Proceed
-        new_password = body.get('password', None)
-        if new_password == None:
-            return JsonResponse({'error': 'Missing password in request body'}, status=400)
+        body = json.loads(request.body)
+    except json.JSONDecodeError:
+        return JsonResponse({'error': 'Invalid JSON body'}, status=400)
 
+    # Validación de campos obligatorios
+    new_username = body.get('username')
+    new_email = body.get('email')
+    new_password = body.get('password')
+
+    if not new_username:
+        return JsonResponse({'error': 'Missing username in request body'}, status=400)
+    if not new_email:
+        return JsonResponse({'error': 'Missing email in request body'}, status=400)
+    if not new_password:
+        return JsonResponse({'error': 'Missing password in request body'}, status=400)
+
+    # Verifica si ya existe un usuario con el mismo username o email
+    if CustomUser.objects.filter(username=new_username).exists():
+        return JsonResponse({'error': 'Username already in use'}, status=409)
+    if CustomUser.objects.filter(email=new_email).exists():
+        return JsonResponse({'error': 'Email already in use'}, status=409)
+
+    # Crear y guardar el usuario
+    try:
         encrypted_pass = bcrypt.hashpw(new_password.encode('utf8'), bcrypt.gensalt()).decode('utf8')
-        new_user = CustomUser()
-        new_user.username = new_username
-        new_user.email = new_email
-        new_user.encrypted_password = encrypted_pass
+        new_user = CustomUser(username=new_username, email=new_email, encrypted_password=encrypted_pass)
         new_user.save()
-        return JsonResponse({'created': 'True'}, status=201)
-
-    # User DOES exist.
-    return JsonResponse({'error': 'User with given username or email already exists'}, status=409)
-
+        return JsonResponse({'created': True}, status=201)
+    except IntegrityError:
+        return JsonResponse({'error': 'Failed to create user due to a database error'}, status=500)
 
 @csrf_exempt
 def login(request):
@@ -84,14 +91,18 @@ def __get_logged_user(request):
     except UserSession.DoesNotExist:
         return None
 
-
 @csrf_exempt
 def mark_unmark_favorite(request, cocktail_id):
     user = __get_logged_user(request)
     if user is None:
         return JsonResponse({'error': 'User not authenticated'}, status=401)
 
-    if request.method == 'DELETE':
+    if request.method == 'GET':
+        # Verificar si el cóctel está en favoritos
+        is_favorite = FavoriteCocktail.objects.filter(user=user, cocktail_id=cocktail_id).exists()
+        return JsonResponse({'favorite': is_favorite}, status=200)
+
+    elif request.method == 'DELETE':
         # Eliminar un cóctel de favoritos
         try:
             favorite_cocktail = FavoriteCocktail.objects.get(user=user, cocktail_id=cocktail_id)
@@ -124,7 +135,6 @@ def mark_unmark_favorite(request, cocktail_id):
     else:
         return JsonResponse({'error': 'Unsupported HTTP method'}, status=405)
 
-
 def favorite_cocktails(request):
     user = __get_logged_user(request)
     if user is None:
@@ -139,6 +149,10 @@ def favorite_cocktails(request):
                 'cocktail_image_url': fav.cocktail_image_url
             } for fav in favorites
         ]
-        return JsonResponse({'favorites': favorites_list}, status=200)
+        return JsonResponse({
+            'username': user.username,
+            'email': user.email,
+            'favorites': favorites_list
+        }, status=200)
 
-    return JsonResponse({'error': 'Unsupported HTTP method'}, status=405)
+        return JsonResponse({'error': 'Unsupported HTTP method'}, status=405)

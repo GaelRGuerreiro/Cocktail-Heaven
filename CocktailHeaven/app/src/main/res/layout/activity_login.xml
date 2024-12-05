@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="¿No tienes cuenta ?"
+        android:text="¿You still dont have an account?"
         android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintStart_toStartOf="@+id/buttonRegister"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
-        android:text="Nombre de Usuario"
+        android:text="Username"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
 
@@ -71,7 +71,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:hint="Nombre de Usuario"
+        android:hint="Name"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -84,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
-        android:text="Contraseña"
+        android:text="Password"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmailLogin" />
 
@@ -95,7 +95,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:hint="Contraseña"
+        android:hint="Your_Password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +109,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="40dp"
-        android:text="Iniciar Sesión"
+        android:text="Log In"
         android:backgroundTint="@color/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,7 +119,7 @@
         android:id="@+id/buttonRegister"
         android:layout_width="331dp"
         android:layout_height="45dp"
-        android:text="Crear Cuenta"
+        android:text="Register"
         android:backgroundTint="@color/button"
         android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"

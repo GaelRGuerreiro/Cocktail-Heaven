@@ -39,7 +39,6 @@ public class LoginActivity extends AppCompatActivity {
     private RequestQueue queue;
     private Activity activity = this;
 
-    //static String host = "http://192.168.1.127:8000";
     static String host = "http://10.0.2.2:8000";
 
 
@@ -59,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("USER_SESSIONS_PREFS", MODE_PRIVATE);
         String validToken = preferences.getString("VALID_TOKEN", null);
         if (validToken != null) {
-            // Si el token es valido,se redirige al usuario a la MainActivity
+            //Si el token es valido,se redirige al usuario a la MainActivity
             Intent intent = new Intent(activity, MainActivity.class);
             startActivity(intent);
             finish();
