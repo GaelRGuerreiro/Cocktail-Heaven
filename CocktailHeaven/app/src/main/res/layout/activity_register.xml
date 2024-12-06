@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
-        android:background="@color/wine"
+        android:background="@color/button"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,6 +40,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:text="Name"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenLogo" />
 
@@ -64,6 +65,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:text="Email"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNombre" />
 
@@ -88,6 +90,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:text="Password"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
@@ -110,7 +113,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Registrar"
+        android:text="Register"
+        android:textSize="20dp"
         android:backgroundTint="@color/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

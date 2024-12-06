@@ -116,7 +116,7 @@ public class CoctelDetail extends AppCompatActivity {
                 Request.Method.PUT,
                 url,
                 requestBody,
-                response -> Toast.makeText(this, "Marcado como favorito", Toast.LENGTH_SHORT).show(),
+                response -> Toast.makeText(this, "Marked as favorite", Toast.LENGTH_SHORT).show(),
                 error -> handleErrorResponse(error)
         ) {
             @Override
@@ -135,7 +135,7 @@ public class CoctelDetail extends AppCompatActivity {
                 Request.Method.DELETE,
                 url,
                 null,
-                response -> Toast.makeText(this, "Desmarcado como favorito", Toast.LENGTH_SHORT).show(),
+                response -> Toast.makeText(this, "Unmarked as favorite", Toast.LENGTH_SHORT).show(),
                 error -> handleErrorResponse(error)
         ) {
             @Override
@@ -188,11 +188,11 @@ public class CoctelDetail extends AppCompatActivity {
 
     private void handleErrorResponse(VolleyError error) {
         if (error.networkResponse == null) {
-            Toast.makeText(this, "Error de red", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Red Error", Toast.LENGTH_SHORT).show();
         } else {
             int serverCode = error.networkResponse.statusCode;
             if (serverCode == 401) {
-                Toast.makeText(this, "No autenticado", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Not autenticated", Toast.LENGTH_SHORT).show();
             }
         }
     }

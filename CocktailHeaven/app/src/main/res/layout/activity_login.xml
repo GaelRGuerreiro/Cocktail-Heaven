@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
-        android:background="@color/wine"
+        android:background="@color/button"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +36,8 @@
         android:layout_marginTop="40dp"
         android:text="¿You still dont have an account?"
         android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20dp"
+
         app:layout_constraintStart_toStartOf="@+id/buttonRegister"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
 
@@ -61,6 +63,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:text="Username"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
 
@@ -85,6 +88,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:text="Password"
+        android:textSize="20dp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmailLogin" />
 
@@ -110,6 +115,8 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="40dp"
         android:text="Log In"
+        android:textSize="20dp"
+
         android:backgroundTint="@color/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,6 +127,8 @@
         android:layout_width="331dp"
         android:layout_height="45dp"
         android:text="Register"
+        android:textSize="20dp"
+
         android:backgroundTint="@color/button"
         android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
