@@ -130,7 +130,7 @@ public class CoctelesFragment extends Fragment{
                 busqueda = campoTexto.getText().toString();
 
                 if(busqueda.equals("")){
-                    
+
                     sendCoctelRequest(url+"a");
                 }else{
                     busqueda = campoTexto.getText().toString();
@@ -139,7 +139,7 @@ public class CoctelesFragment extends Fragment{
                 }
 
            }
-
+// Metodo que gestiona la busqueda a la vez que se escribe
             @Override
             public void afterTextChanged(Editable s) {
                 if (s.length() == 0) {
@@ -173,6 +173,7 @@ public class CoctelesFragment extends Fragment{
 
         sendCoctelRequest(url+"a");
     }
+    //Metodo encargado de , dependiendo de la letra clickeada, mandar una peticion con dicha letra
     private void setupLetterClickListener(View layout,int letraId, final String letra) {
 
         TextView letraTextView = layout.findViewById(letraId);
@@ -230,7 +231,7 @@ public class CoctelesFragment extends Fragment{
         }
 
 
-
+// Metodo encargado de mandar la peticion de busqueda de coctel
     public void sendSearchRequest(String search){
         JsonObjectRequest request = new JsonObjectRequest(
                 Request.Method.GET,

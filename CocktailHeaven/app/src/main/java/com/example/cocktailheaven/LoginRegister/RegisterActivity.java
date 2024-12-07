@@ -77,7 +77,7 @@ public class RegisterActivity extends AppCompatActivity {
                         editor.putString("VALID_EMAIL", editTextEmail.getText().toString());
                         editor.apply();
 
-                        Toast.makeText(RegisterActivity.this, "Usuario creado", Toast.LENGTH_LONG).show();
+                        Toast.makeText(RegisterActivity.this, "Created user", Toast.LENGTH_LONG).show();
                         finish();
                     }
                 },
@@ -85,7 +85,7 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         if (error.networkResponse == null) {
-                            Toast.makeText(RegisterActivity.this, "No se ha establecido la conexión", Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegisterActivity.this, "The connection has not been established", Toast.LENGTH_LONG).show();
                         } else {
                             try {
                                 int serverCode = error.networkResponse.statusCode;
@@ -94,20 +94,20 @@ public class RegisterActivity extends AppCompatActivity {
                                 String errorText = errorJson.getString("error");
 
                                 if (serverCode == 400) {
-                                    Toast.makeText(RegisterActivity.this, "Completa correctamente todos los campos.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(RegisterActivity.this, "Complete all fields correctly.", Toast.LENGTH_SHORT).show();
                                 } else if (serverCode == 409) {
                                     if (errorText.equals("Username already in use")) {
-                                        Toast.makeText(RegisterActivity.this, "El nombre de usuario ya está en uso.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "The username is already in use", Toast.LENGTH_SHORT).show();
                                     } else if (errorText.equals("Email already in use")) {
-                                        Toast.makeText(RegisterActivity.this, "El correo electrónico ya está registrado.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "The email is already registered.", Toast.LENGTH_SHORT).show();
                                     } else {
-                                        Toast.makeText(RegisterActivity.this, "Conflicto desconocido.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "Unknown conflict.", Toast.LENGTH_SHORT).show();
                                     }
                                 } else {
-                                    Toast.makeText(RegisterActivity.this, "Error inesperado. Inténtalo de nuevo.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(RegisterActivity.this, "Unexpected error. Please try again.", Toast.LENGTH_SHORT).show();
                                 }
                             } catch (Exception e) {
-                                Toast.makeText(RegisterActivity.this, "Error al procesar la respuesta.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(RegisterActivity.this, "Error processing the response.", Toast.LENGTH_LONG).show();
                             }
                         }
                     }

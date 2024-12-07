@@ -46,7 +46,6 @@ public class CoctelDetail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.coctel_detail);
 
-        // Inicializar componentes de la UI
         recipeButton = findViewById(R.id.button_recipe);
         coctelImageView = findViewById(R.id.coctelImageView);
         coctelNameTextView = findViewById(R.id.coctelNameTextView);
@@ -69,19 +68,16 @@ public class CoctelDetail extends AppCompatActivity {
         ArrayList<String> medidas = intent.getStringArrayListExtra("Medidas");
         String cocktailId = intent.getStringExtra("idDrink");
 
-        // Mostrar datos en la UI
         coctelNameTextView.setText(nombreCoctel);
         coctelCategory.setText(category);
         coctelGlass.setText(glass);
         coctelAlcohol.setText(alcohol);
         Util.downloadBitmapToImageView(image, coctelImageView);
 
-        // Verificar si el cóctel ya está marcado como favorito
         favSwitch.setOnCheckedChangeListener(null);
 
         checkIfFavorite(cocktailId);
 
-        // Escuchar cambios en el switch de favoritos
         favSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 markAsFavorite(cocktailId, nombreCoctel, image);
@@ -90,7 +86,6 @@ public class CoctelDetail extends AppCompatActivity {
             }
         });
 
-        // Navegar a la pantalla de receta
         recipeButton.setOnClickListener(v -> {
             Intent intent2 = new Intent(CoctelDetail.this, RecipeDetail.class);
             intent2.putExtra("strInstructions", receta);
@@ -101,6 +96,7 @@ public class CoctelDetail extends AppCompatActivity {
         });
     }
 
+    // Método para marcar el cóctel como favorito
     private void markAsFavorite(String cocktailId, String cocktailName, String imageUrl) {
         String url = host + "/favorites/" + cocktailId;
         JSONObject requestBody = new JSONObject();
@@ -147,6 +143,7 @@ public class CoctelDetail extends AppCompatActivity {
         queue.add(request);
     }
 
+    // Método para verificar si el cóctel está marcado como favorito
     private void checkIfFavorite(String cocktailId) {
         String url = host + "/favorites/" + cocktailId;
 
@@ -175,7 +172,7 @@ public class CoctelDetail extends AppCompatActivity {
         queue.add(request);
     }
 
-
+    // Método para obtener los encabezados de autenticación con el token de sesión
     private Map<String, String> getAuthHeaders() {
         SharedPreferences preferences = getSharedPreferences("USER_SESSIONS_PREFS", MODE_PRIVATE);
         String sessionToken = preferences.getString("VALID_TOKEN", null);

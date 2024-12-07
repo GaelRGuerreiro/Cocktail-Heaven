@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -72,17 +71,19 @@ public class PerfilFragment extends Fragment {
 
         // Configuración del RecyclerView
         favoriteAdapter = new FavoriteAdapter(favoritesList);
-
         favoritesRecyclerView.setLayoutManager(new GridLayoutManager(context, 2));
-
         favoritesRecyclerView.setAdapter(favoriteAdapter);
 
-        setupLogoutButton();
-        // Cargar los favoritos desde el backend
-        loadFavorites();
+        setupLogoutButton(); // Configurar el botón de logout
+        loadFavorites();     // Cargar la lista de favoritos
 
         return view;
     }
+
+
+     //Método para cargar los cócteles favoritos desde el backend.
+     //Realiza una petición GET al servidor y actualiza la lista de favoritos
+     //en el RecyclerView.
 
     private void loadFavorites() {
         loadingImage.setVisibility(View.VISIBLE);
@@ -101,12 +102,14 @@ public class PerfilFragment extends Fragment {
                             loadingImage.setVisibility(View.GONE);
 
                             try {
+                                // Actualizar los datos de perfil
                                 String username = response.getString("username");
                                 String email = response.getString("email");
 
                                 textViewUsername.setText(username);
                                 textViewEmail.setText(email);
 
+                                // Parsear y mostrar la lista de favoritos
                                 JSONArray favoritesArray = response.getJSONArray("favorites");
                                 List<FavoriteCocktail> favoritesList = parseFavorites(favoritesArray);
                                 favoriteAdapter.updateData(favoritesList);
@@ -114,9 +117,6 @@ public class PerfilFragment extends Fragment {
                                 if (favoritesList.isEmpty()) {
                                     Toast.makeText(context, "No favorites yet.", Toast.LENGTH_SHORT).show();
                                 }
-
-
-
                             } catch (JSONException e) {
                                 Toast.makeText(context, "Error processing response.", Toast.LENGTH_SHORT).show();
                                 e.printStackTrace();
@@ -126,8 +126,7 @@ public class PerfilFragment extends Fragment {
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(context, "Error al cargar favoritos", Toast.LENGTH_SHORT).show();
-                            Toast.makeText(context, "Error al obtener los datos del perfil", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Error procesing favorites", Toast.LENGTH_SHORT).show();
                         }
                     }
             ) {
@@ -136,16 +135,17 @@ public class PerfilFragment extends Fragment {
                     Map<String, String> headers = new HashMap<>();
                     headers.put("Sesion-Token", sessionToken);
                     return headers;
-
                 }
             };
 
             queue.add(request);
         }
-
-
-
     }
+
+
+     // Método para parsear el JSON recibido y convertirlo en una lista de cócteles favoritos.
+
+
     private List<FavoriteCocktail> parseFavorites(JSONArray favoritesArray) throws JSONException {
         List<FavoriteCocktail> favoritesList = new ArrayList<>();
         for (int i = 0; i < favoritesArray.length(); i++) {
@@ -159,11 +159,13 @@ public class PerfilFragment extends Fragment {
     }
 
 
-    private void setupLogoutButton(){
+     // Método para configurar el botón de logout.
+     // Cierra la sesión del usuario, borra el token y redirige a la pantalla de login.
 
-        logoutButton.setOnClickListener(new View.OnClickListener(){
+    private void setupLogoutButton() {
+        logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 SharedPreferences preferences = context.getSharedPreferences("USER_SESSIONS_PREFS", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.remove("VALID_TOKEN");
@@ -173,10 +175,7 @@ public class PerfilFragment extends Fragment {
                 Intent intent = new Intent(requireActivity(), LoginActivity.class);
                 startActivity(intent);
                 requireActivity().finish();
-
             }
-
         });
-
     }
 }

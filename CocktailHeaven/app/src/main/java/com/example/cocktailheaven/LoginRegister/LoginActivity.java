@@ -106,8 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                         } catch (JSONException e) {
                             throw new RuntimeException(e);
                         }
-                        Toast.makeText(context, "Token de sesión: " + receivedToken, Toast.LENGTH_SHORT).show();
-                        Toast.makeText(context, "Iniciando sesión...", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Logging in...", Toast.LENGTH_SHORT).show();
 
                         SharedPreferences preferences = context.getSharedPreferences("USER_SESSIONS_PREFS", MODE_PRIVATE);
                         SharedPreferences.Editor editor = preferences.edit();
@@ -131,15 +130,15 @@ public class LoginActivity extends AppCompatActivity {
                             int serverCode = error.networkResponse.statusCode;
                             // Manejar diferentes códigos de error del servidor
                             if (serverCode == 404) {
-                                Toast.makeText(context, "Usuario no válido", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, "Invalid user", Toast.LENGTH_SHORT).show();
                             }
 
                             if (serverCode == 401) {
-                                Toast.makeText(context, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, "Incorrect Password", Toast.LENGTH_SHORT).show();
                             }
 
                             if (serverCode == 500) {
-                                Toast.makeText(context, "Problemas con el servidor", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, "Server Problems", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
